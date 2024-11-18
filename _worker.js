@@ -4328,7 +4328,7 @@ var worker_default = {
               }
             });
           default:
-            url.hostname = "104.18.175.126";
+            url.hostname = "smallpdf.com";
             url.protocol = "https:";
             request = new Request(url, request);
             return await fetch(request);
@@ -5100,7 +5100,7 @@ async function getConfigAddresses(hostName, cleanIPs, enableIPv6) {
   const defaultIPv6 = enableIPv6 ? resolved.ipv6.map((ip) => `[${ip}]`) : [];
   return [
     hostName,
-    "104.18.175.126",
+    "smallpdf.com",
     ...resolved.ipv4,
     ...defaultIPv6,
     ...cleanIPs ? cleanIPs.split(",") : []
@@ -6907,7 +6907,7 @@ async function buildXrayDNS(proxySettings, outboundAddrs, domainToStaticIPs, isW
   if (isWorkerLess) {
     const resolvedDOH = await resolveDNS("cloudflare-dns.com");
     const resolvedCloudflare = await resolveDNS("cloudflare.com");
-    const resolvedCLDomain = await resolveDNS("104.18.175.126.cdn.cloudflare.net");
+    const resolvedCLDomain = await resolveDNS("smallpdf.com.cdn.cloudflare.net");
     const resolvedCFNS_1 = await resolveDNS("ben.ns.cloudflare.com");
     const resolvedCFNS_2 = await resolveDNS("lara.ns.cloudflare.com");
     dnsObject.hosts["cloudflare-dns.com"] = [
